@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3-ECE385
-Tue Feb 08 23:07:13 2022
+Wed Feb 09 00:48:31 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,18 +10,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |adder2|control:run_once|curr_state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Port Connectivity Checks: "select_adder:adders"
- 12. Port Connectivity Checks: "router:route"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,22 +37,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 08 23:07:13 2022       ;
+; Analysis & Synthesis Status        ; Failed - Wed Feb 09 00:48:31 2022           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab3-ECE385                                 ;
-; Top-level Entity Name              ; adder2                                      ;
+; Top-level Entity Name              ; ripple_adder                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 14                                          ;
-;     Total combinational functions  ; 14                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 65                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -72,7 +62,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; adder2             ; lab3-ECE385        ;
+; Top-level entity name                                            ; ripple_adder       ; lab3-ECE385        ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -168,156 +158,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
-+-----------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path              ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
-+-----------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
-; 385_lab4_adders_provided_fa20/select_adder.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/select_adder.sv ;         ;
-; 385_lab4_adders_provided_fa20/router.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/router.sv       ;         ;
-; 385_lab4_adders_provided_fa20/reg_17.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/reg_17.sv       ;         ;
-; 385_lab4_adders_provided_fa20/HexDriver.sv    ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/HexDriver.sv    ;         ;
-; 385_lab4_adders_provided_fa20/control.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/control.sv      ;         ;
-; 385_lab4_adders_provided_fa20/adder2.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv       ;         ;
-+-----------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 14          ;
-;                                             ;             ;
-; Total combinational functions               ; 14          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 14          ;
-;     -- 3 input functions                    ; 0           ;
-;     -- <=2 input functions                  ; 0           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 14          ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 0           ;
-;     -- Dedicated logic registers            ; 0           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 65          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; SW[0]~input ;
-; Maximum fan-out                             ; 7           ;
-; Total fan-out                               ; 137         ;
-; Average fan-out                             ; 0.95        ;
-+---------------------------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name     ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+-------------+--------------+
-; |adder2                    ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 65   ; 0            ; 0          ; |adder2                 ; adder2      ; work         ;
-;    |HexDriver:AHex0|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:AHex0 ; HexDriver   ; work         ;
-;    |HexDriver:AHex1|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:AHex1 ; HexDriver   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------+
-; State Machine - |adder2|control:run_once|curr_state       ;
-+--------------+--------------+--------------+--------------+
-; Name         ; curr_state.A ; curr_state.C ; curr_state.B ;
-+--------------+--------------+--------------+--------------+
-; curr_state.A ; 0            ; 0            ; 0            ;
-; curr_state.B ; 1            ; 0            ; 1            ;
-; curr_state.C ; 1            ; 1            ; 0            ;
-+--------------+--------------+--------------+--------------+
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; reg_17:reg_unit|Data_Out[0..16]        ; Stuck at GND due to stuck port data_in ;
-; control:run_once|curr_state~6          ; Lost fanout                            ;
-; control:run_once|curr_state.B          ; Lost fanout                            ;
-; control:run_once|curr_state.C          ; Lost fanout                            ;
-; control:run_once|curr_state.A          ; Lost fanout                            ;
-; Total Number of Removed Registers = 21 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------+
-; Port Connectivity Checks: "select_adder:adders" ;
-+------+-------+----------+-----------------------+
-; Port ; Type  ; Severity ; Details               ;
-+------+-------+----------+-----------------------+
-; cin  ; Input ; Info     ; Stuck at GND          ;
-+------+-------+----------+-----------------------+
-
-
-+------------------------------------------------+
-; Port Connectivity Checks: "router:route"       ;
-+--------------+-------+----------+--------------+
-; Port         ; Type  ; Severity ; Details      ;
-+--------------+-------+----------+--------------+
-; A_In[15..10] ; Input ; Info     ; Stuck at GND ;
-+--------------+-------+----------+--------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 65                          ;
-; cycloneiii_lcell_comb ; 18                          ;
-;     normal            ; 18                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         4 data inputs ; 14                          ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.29                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Feb 08 23:07:01 2022
+    Info: Processing started: Wed Feb 09 00:48:12 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3-ECE385 -c lab3-ECE385
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -325,8 +172,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file 385_lab
     Info (12023): Found entity 1: select_adder File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/select_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/router.sv
     Info (12023): Found entity 1: router File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/router.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/ripple_adder.sv
-    Info (12023): Found entity 1: ripple_adder File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 1
+Error (10170): Verilog HDL syntax error at ripple_adder.sv(17) near text: "4";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 17
+Error (10170): Verilog HDL syntax error at ripple_adder.sv(18) near text: "4";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 18
+Error (10170): Verilog HDL syntax error at ripple_adder.sv(19) near text: "4";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 19
+Error (10170): Verilog HDL syntax error at ripple_adder.sv(20) near text: "4";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 20
+Error (10112): Ignored design unit "ripple_adder" at ripple_adder.sv(1) due to previous errors File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file 385_lab4_adders_provided_fa20/ripple_adder.sv
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/reg_17.sv
     Info (12023): Found entity 1: reg_17 File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/reg_17.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/lookahead_adder.sv
@@ -337,69 +188,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file 385_lab
     Info (12023): Found entity 1: control File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/control.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/adder2.sv
     Info (12023): Found entity 1: adder2 File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 1
-Info (12127): Elaborating entity "adder2" for the top level hierarchy
-Info (12128): Elaborating entity "control" for hierarchy "control:run_once" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 30
-Info (12128): Elaborating entity "router" for hierarchy "router:route" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 33
-Info (12128): Elaborating entity "reg_17" for hierarchy "reg_17:reg_unit" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 36
-Info (12128): Elaborating entity "select_adder" for hierarchy "select_adder:adders" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 44
-Warning (10034): Output port "S" at select_adder.sv(4) has no driver File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/select_adder.sv Line: 4
-Warning (10034): Output port "cout" at select_adder.sv(6) has no driver File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/select_adder.sv Line: 6
-Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:AHex0" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 50
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED[2]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 3
-    Warning (13410): Pin "LED[3]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 3
-    Warning (13410): Pin "LED[4]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 3
-    Warning (13410): Pin "LED[5]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 3
-    Warning (13410): Pin "LED[6]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 3
-    Warning (13410): Pin "LED[7]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 3
-    Warning (13410): Pin "LED[8]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 3
-    Warning (13410): Pin "LED[9]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 3
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 6
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 6
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 6
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 6
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 6
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 6
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 6
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 7
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 7
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 7
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 7
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 7
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 7
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 7
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 8
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 8
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 8
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 8
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 8
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 8
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 8
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 10
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 10
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 10
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 10
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 10
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 10
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 10
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Error (10170): Verilog HDL syntax error at 4bitRippleAdder.sv(9) near text: "4";  expecting an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/4bitRippleAdder.sv Line: 9
+Info (12021): Found 0 design units, including 0 entities, in source file 4bitrippleadder.sv
+Error (10170): Verilog HDL syntax error at testbench-RA.sv(1) near text: "-";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/testbench-RA.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file testbench-ra.sv
 Info (144001): Generated suppressed messages file C:/Users/alijh/Documents/ECE 385/lab3-ECE385/output_files/lab3-ECE385.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Run_Accumulate" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 1
-    Warning (15610): No output dependent on input pin "Clk" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 1
-    Warning (15610): No output dependent on input pin "Reset_Clear" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 1
-Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 14 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Peak virtual memory: 4751 megabytes
-    Info: Processing ended: Tue Feb 08 23:07:13 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:26
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 1 warning
+    Error: Peak virtual memory: 4703 megabytes
+    Error: Processing ended: Wed Feb 09 00:48:31 2022
+    Error: Elapsed time: 00:00:19
+    Error: Total CPU time (on all processors): 00:00:46
 
 
 +------------------------------------------+
