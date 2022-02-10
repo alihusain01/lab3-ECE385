@@ -14,10 +14,10 @@ module ripple_adder
 	  
 logic c1, c2, c3;
 
-4bitRippleAdder RA0(.x(A[3:0]), .y(B[3:0]), .z(c_in), .s(S[3:0]), .c(c1));
-4bitRippleAdder RA1(.x(A[7:4]), .y(B[7:4]), .z(c1), .s(S[7:4]), .c(c2));
-4bitRippleAdder RA2(.x(A[11:8]), .y(B[11:8]), .z(c2), .s(S[11:8]), .c(c3));
-4bitRippleAdder RA3(.x(A[15:12]), .y(B[15:12]), .z(c3), .s(S[15:12]), .c(cout));
+fourbitRippleAdder RA0(.A(A[3:0]), .B(B[3:0]), .c_in(c_in), .S(S[3:0]), .c_out(c1));
+fourbitRippleAdder RA1(.A(A[7:4]), .B(B[7:4]), .c_in(c1), .S(S[7:4]), .c_out(c2));
+fourbitRippleAdder RA2(.A(A[11:8]), .B(B[11:8]), .c_in(c2), .S(S[11:8]), .c_out(c3));
+fourbitRippleAdder RA3(.A(A[15:12]), .B(B[15:12]), .c_in(c3), .S(S[15:12]), .c_out(cout));
 	  
 //module 4bitRippleAdder (input logic[3:0] A, B, 
 //								logic c_in,

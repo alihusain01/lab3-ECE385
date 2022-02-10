@@ -6,10 +6,10 @@ module full_adder (input logic x, y, z,
 endmodule
 
 
-module 4bitRippleAdder (input logic[3:0] A, B, 
-								logic c_in,
+module fourbitRippleAdder (input logic[3:0] A, B, 
+								input logic c_in,
 								output logic [3:0] S,
-								logic c_out);
+								output logic c_out);
 								
 logic c1, c2, c3;
 

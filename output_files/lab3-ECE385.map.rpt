@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3-ECE385
-Wed Feb 09 00:48:31 2022
+Wed Feb 09 22:03:10 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,8 +10,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,22 +43,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Feb 09 00:48:31 2022           ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 09 22:03:10 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab3-ECE385                                 ;
 ; Top-level Entity Name              ; ripple_adder                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 31                                          ;
+;     Total combinational functions  ; 31                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 50                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -147,8 +153,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -158,51 +164,174 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                           ;
++-----------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path              ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                          ; Library ;
++-----------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; 385_lab4_adders_provided_fa20/ripple_adder.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv ;         ;
+; 4bitRippleAdder.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/4bitRippleAdder.sv                            ;         ;
++-----------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 31         ;
+;                                             ;            ;
+; Total combinational functions               ; 31         ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 2          ;
+;     -- 3 input functions                    ; 28         ;
+;     -- <=2 input functions                  ; 1          ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 31         ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 0          ;
+;     -- Dedicated logic registers            ; 0          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 50         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; A[0]~input ;
+; Maximum fan-out                             ; 3          ;
+; Total fan-out                               ; 161        ;
+; Average fan-out                             ; 1.23       ;
++---------------------------------------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                        ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                 ; Entity Name        ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------+--------------------+--------------+
+; |ripple_adder               ; 31 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 50   ; 0            ; 0          ; |ripple_adder                                       ; ripple_adder       ; work         ;
+;    |fourbitRippleAdder:RA0| ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA0                ; fourbitRippleAdder ; work         ;
+;       |full_adder:FA0|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA0|full_adder:FA0 ; full_adder         ; work         ;
+;       |full_adder:FA1|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA0|full_adder:FA1 ; full_adder         ; work         ;
+;       |full_adder:FA2|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA0|full_adder:FA2 ; full_adder         ; work         ;
+;       |full_adder:FA3|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA0|full_adder:FA3 ; full_adder         ; work         ;
+;    |fourbitRippleAdder:RA1| ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA1                ; fourbitRippleAdder ; work         ;
+;       |full_adder:FA0|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA1|full_adder:FA0 ; full_adder         ; work         ;
+;       |full_adder:FA1|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA1|full_adder:FA1 ; full_adder         ; work         ;
+;       |full_adder:FA2|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA1|full_adder:FA2 ; full_adder         ; work         ;
+;       |full_adder:FA3|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA1|full_adder:FA3 ; full_adder         ; work         ;
+;    |fourbitRippleAdder:RA2| ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA2                ; fourbitRippleAdder ; work         ;
+;       |full_adder:FA0|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA2|full_adder:FA0 ; full_adder         ; work         ;
+;       |full_adder:FA1|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA2|full_adder:FA1 ; full_adder         ; work         ;
+;       |full_adder:FA2|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA2|full_adder:FA2 ; full_adder         ; work         ;
+;       |full_adder:FA3|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA2|full_adder:FA3 ; full_adder         ; work         ;
+;    |fourbitRippleAdder:RA3| ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA3                ; fourbitRippleAdder ; work         ;
+;       |full_adder:FA0|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA3|full_adder:FA0 ; full_adder         ; work         ;
+;       |full_adder:FA1|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA3|full_adder:FA1 ; full_adder         ; work         ;
+;       |full_adder:FA2|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA3|full_adder:FA2 ; full_adder         ; work         ;
+;       |full_adder:FA3|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ripple_adder|fourbitRippleAdder:RA3|full_adder:FA3 ; full_adder         ; work         ;
++-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 50                          ;
+; cycloneiii_lcell_comb ; 31                          ;
+;     normal            ; 31                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 28                          ;
+;         4 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 15.00                       ;
+; Average LUT depth     ; 9.78                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 09 00:48:12 2022
+    Info: Processing started: Wed Feb 09 22:02:53 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3-ECE385 -c lab3-ECE385
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/select_adder.sv
-    Info (12023): Found entity 1: select_adder File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/select_adder.sv Line: 1
+    Info (12023): Found entity 1: select_adder File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/select_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/router.sv
-    Info (12023): Found entity 1: router File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/router.sv Line: 1
-Error (10170): Verilog HDL syntax error at ripple_adder.sv(17) near text: "4";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 17
-Error (10170): Verilog HDL syntax error at ripple_adder.sv(18) near text: "4";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 18
-Error (10170): Verilog HDL syntax error at ripple_adder.sv(19) near text: "4";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 19
-Error (10170): Verilog HDL syntax error at ripple_adder.sv(20) near text: "4";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 20
-Error (10112): Ignored design unit "ripple_adder" at ripple_adder.sv(1) due to previous errors File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file 385_lab4_adders_provided_fa20/ripple_adder.sv
+    Info (12023): Found entity 1: router File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/router.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/ripple_adder.sv
+    Info (12023): Found entity 1: ripple_adder File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/reg_17.sv
-    Info (12023): Found entity 1: reg_17 File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/reg_17.sv Line: 1
+    Info (12023): Found entity 1: reg_17 File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/reg_17.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/lookahead_adder.sv
-    Info (12023): Found entity 1: lookahead_adder File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 1
+    Info (12023): Found entity 1: lookahead_adder File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/hexdriver.sv
-    Info (12023): Found entity 1: HexDriver File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/HexDriver.sv Line: 1
+    Info (12023): Found entity 1: HexDriver File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/HexDriver.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/control.sv
-    Info (12023): Found entity 1: control File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/control.sv Line: 1
+    Info (12023): Found entity 1: control File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/control.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 385_lab4_adders_provided_fa20/adder2.sv
-    Info (12023): Found entity 1: adder2 File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 1
-Error (10170): Verilog HDL syntax error at 4bitRippleAdder.sv(9) near text: "4";  expecting an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/4bitRippleAdder.sv Line: 9
-Info (12021): Found 0 design units, including 0 entities, in source file 4bitrippleadder.sv
-Error (10170): Verilog HDL syntax error at testbench-RA.sv(1) near text: "-";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/testbench-RA.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file testbench-ra.sv
-Info (144001): Generated suppressed messages file C:/Users/alijh/Documents/ECE 385/lab3-ECE385/output_files/lab3-ECE385.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 1 warning
-    Error: Peak virtual memory: 4703 megabytes
-    Error: Processing ended: Wed Feb 09 00:48:31 2022
-    Error: Elapsed time: 00:00:19
-    Error: Total CPU time (on all processors): 00:00:46
+    Info (12023): Found entity 1: adder2 File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file 4bitrippleadder.sv
+    Info (12023): Found entity 1: full_adder File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/4bitRippleAdder.sv Line: 1
+    Info (12023): Found entity 2: fourbitRippleAdder File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/4bitRippleAdder.sv Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file testbench-ra.sv
+    Info (12023): Found entity 1: testbench_RA File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/testbench-RA.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at ripple_adder.sv(17): created implicit net for "c_in" File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 17
+Info (12127): Elaborating entity "ripple_adder" for the top level hierarchy
+Info (12128): Elaborating entity "fourbitRippleAdder" for hierarchy "fourbitRippleAdder:RA0" File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 17
+Info (12128): Elaborating entity "full_adder" for hierarchy "fourbitRippleAdder:RA0|full_adder:FA0" File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/4bitRippleAdder.sv Line: 16
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/output_files/lab3-ECE385.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "cin" File: C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 4
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 31 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4765 megabytes
+    Info: Processing ended: Wed Feb 09 22:03:10 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/alijh/Documents/ECE 385/lab3-ECE385/output_files/lab3-ECE385.map.smsg.
+The suppressed messages can be found in C:/Users/kclim/OneDrive/Documents/ece385git/lab3-ECE385/output_files/lab3-ECE385.map.smsg.
 
 
