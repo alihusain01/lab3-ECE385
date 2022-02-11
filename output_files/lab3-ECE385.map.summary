@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Feb 09 22:03:10 2022
+Analysis & Synthesis Status : Successful - Thu Feb 10 02:11:05 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : lab3-ECE385
-Top-level Entity Name : ripple_adder
+Top-level Entity Name : adder2
 Family : MAX 10
-Total logic elements : 31
-    Total combinational functions : 31
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 50
+Total logic elements : 86
+    Total combinational functions : 86
+    Dedicated logic registers : 20
+Total registers : 20
+Total pins : 65
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

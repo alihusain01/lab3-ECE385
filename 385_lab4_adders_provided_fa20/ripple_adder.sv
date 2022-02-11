@@ -13,11 +13,44 @@ module ripple_adder
      * Feel free to create sub-modules or other files. */
 	  
 logic c1, c2, c3;
+//logic [15:0]A, B;
 
-fourbitRippleAdder RA0(.A(A[3:0]), .B(B[3:0]), .c_in(c_in), .S(S[3:0]), .c_out(c1));
-fourbitRippleAdder RA1(.A(A[7:4]), .B(B[7:4]), .c_in(c1), .S(S[7:4]), .c_out(c2));
-fourbitRippleAdder RA2(.A(A[11:8]), .B(B[11:8]), .c_in(c2), .S(S[11:8]), .c_out(c3));
-fourbitRippleAdder RA3(.A(A[15:12]), .B(B[15:12]), .c_in(c3), .S(S[15:12]), .c_out(cout));
+//assign A = 16'b0000000000001111;
+//assign B = 16'b0000000011110000;
+
+fourbitRippleAdder RA0(.A(A[3:0]), .B(B[3:0]), .cin(cin), .S(S[3:0]), .cout(c1));
+fourbitRippleAdder RA1(.A(A[7:4]), .B(B[7:4]), .cin(c1), .S(S[7:4]), .cout(c2));
+fourbitRippleAdder RA2(.A(A[11:8]), .B(B[11:8]), .cin(c2), .S(S[11:8]), .cout(c3));
+fourbitRippleAdder RA3(.A(A[15:12]), .B(B[15:12]), .cin(c3), .S(S[15:12]), .cout(cout));
+
+//		HexDriver		AHex0 (
+//								.In0(SW[3:0]),
+//								.Out0(HEX0) );
+//								
+//		HexDriver		AHex1 (
+//								.In0(SW[7:4]),
+//								.Out0(HEX1) );
+//								
+//		HexDriver		BHex0 (
+//								.In0(Out[3:0]),
+//								.Out0(HEX2) );
+//								
+//		HexDriver		BHex1 (
+//								.In0(Out[7:4]),
+//								.Out0(HEX3) );
+//		
+//		HexDriver		BHex2 (
+//								.In0(Out[11:8]),
+//								.Out0(HEX4) );
+//								
+//		HexDriver		BHex3 (
+//								.In0(Out[15:12]),
+//								.Out0(HEX5) );
+//								
+//		
+//		assign LED[1:0] = SW[9:8];
+//		assign LED[9] = Out[16];
+//		assign LED[8:2] = 7'h00;
 	  
 //module 4bitRippleAdder (input logic[3:0] A, B, 
 //								logic c_in,
