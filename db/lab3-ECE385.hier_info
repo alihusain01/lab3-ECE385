@@ -14,58 +14,58 @@ SW[6] => extended_SW[6].IN3
 SW[7] => extended_SW[7].IN3
 SW[8] => extended_SW[8].IN2
 SW[9] => extended_SW[9].IN2
-LED[0] << extended_SW[8].DB_MAX_OUTPUT_PORT_TYPE
-LED[1] << extended_SW[9].DB_MAX_OUTPUT_PORT_TYPE
-LED[2] << <GND>
-LED[3] << <GND>
-LED[4] << <GND>
-LED[5] << <GND>
-LED[6] << <GND>
-LED[7] << <GND>
-LED[8] << <GND>
-LED[9] << reg_17:reg_unit.Data_Out[16]
-HEX0[0] << HexDriver:AHex0.Out0
-HEX0[1] << HexDriver:AHex0.Out0
-HEX0[2] << HexDriver:AHex0.Out0
-HEX0[3] << HexDriver:AHex0.Out0
-HEX0[4] << HexDriver:AHex0.Out0
-HEX0[5] << HexDriver:AHex0.Out0
-HEX0[6] << HexDriver:AHex0.Out0
-HEX1[0] << HexDriver:AHex1.Out0
-HEX1[1] << HexDriver:AHex1.Out0
-HEX1[2] << HexDriver:AHex1.Out0
-HEX1[3] << HexDriver:AHex1.Out0
-HEX1[4] << HexDriver:AHex1.Out0
-HEX1[5] << HexDriver:AHex1.Out0
-HEX1[6] << HexDriver:AHex1.Out0
-HEX2[0] << HexDriver:BHex0.Out0
-HEX2[1] << HexDriver:BHex0.Out0
-HEX2[2] << HexDriver:BHex0.Out0
-HEX2[3] << HexDriver:BHex0.Out0
-HEX2[4] << HexDriver:BHex0.Out0
-HEX2[5] << HexDriver:BHex0.Out0
-HEX2[6] << HexDriver:BHex0.Out0
-HEX3[0] << HexDriver:BHex1.Out0
-HEX3[1] << HexDriver:BHex1.Out0
-HEX3[2] << HexDriver:BHex1.Out0
-HEX3[3] << HexDriver:BHex1.Out0
-HEX3[4] << HexDriver:BHex1.Out0
-HEX3[5] << HexDriver:BHex1.Out0
-HEX3[6] << HexDriver:BHex1.Out0
-HEX4[0] << HexDriver:BHex2.Out0
-HEX4[1] << HexDriver:BHex2.Out0
-HEX4[2] << HexDriver:BHex2.Out0
-HEX4[3] << HexDriver:BHex2.Out0
-HEX4[4] << HexDriver:BHex2.Out0
-HEX4[5] << HexDriver:BHex2.Out0
-HEX4[6] << HexDriver:BHex2.Out0
-HEX5[0] << HexDriver:BHex3.Out0
-HEX5[1] << HexDriver:BHex3.Out0
-HEX5[2] << HexDriver:BHex3.Out0
-HEX5[3] << HexDriver:BHex3.Out0
-HEX5[4] << HexDriver:BHex3.Out0
-HEX5[5] << HexDriver:BHex3.Out0
-HEX5[6] << HexDriver:BHex3.Out0
+LED[0] <= extended_SW[8].DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= extended_SW[9].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= <GND>
+LED[3] <= <GND>
+LED[4] <= <GND>
+LED[5] <= <GND>
+LED[6] <= <GND>
+LED[7] <= <GND>
+LED[8] <= <GND>
+LED[9] <= reg_17:reg_unit.Data_Out[16]
+HEX0[0] <= HexDriver:AHex0.Out0
+HEX0[1] <= HexDriver:AHex0.Out0
+HEX0[2] <= HexDriver:AHex0.Out0
+HEX0[3] <= HexDriver:AHex0.Out0
+HEX0[4] <= HexDriver:AHex0.Out0
+HEX0[5] <= HexDriver:AHex0.Out0
+HEX0[6] <= HexDriver:AHex0.Out0
+HEX1[0] <= HexDriver:AHex1.Out0
+HEX1[1] <= HexDriver:AHex1.Out0
+HEX1[2] <= HexDriver:AHex1.Out0
+HEX1[3] <= HexDriver:AHex1.Out0
+HEX1[4] <= HexDriver:AHex1.Out0
+HEX1[5] <= HexDriver:AHex1.Out0
+HEX1[6] <= HexDriver:AHex1.Out0
+HEX2[0] <= HexDriver:BHex0.Out0
+HEX2[1] <= HexDriver:BHex0.Out0
+HEX2[2] <= HexDriver:BHex0.Out0
+HEX2[3] <= HexDriver:BHex0.Out0
+HEX2[4] <= HexDriver:BHex0.Out0
+HEX2[5] <= HexDriver:BHex0.Out0
+HEX2[6] <= HexDriver:BHex0.Out0
+HEX3[0] <= HexDriver:BHex1.Out0
+HEX3[1] <= HexDriver:BHex1.Out0
+HEX3[2] <= HexDriver:BHex1.Out0
+HEX3[3] <= HexDriver:BHex1.Out0
+HEX3[4] <= HexDriver:BHex1.Out0
+HEX3[5] <= HexDriver:BHex1.Out0
+HEX3[6] <= HexDriver:BHex1.Out0
+HEX4[0] <= HexDriver:BHex2.Out0
+HEX4[1] <= HexDriver:BHex2.Out0
+HEX4[2] <= HexDriver:BHex2.Out0
+HEX4[3] <= HexDriver:BHex2.Out0
+HEX4[4] <= HexDriver:BHex2.Out0
+HEX4[5] <= HexDriver:BHex2.Out0
+HEX4[6] <= HexDriver:BHex2.Out0
+HEX5[0] <= HexDriver:BHex3.Out0
+HEX5[1] <= HexDriver:BHex3.Out0
+HEX5[2] <= HexDriver:BHex3.Out0
+HEX5[3] <= HexDriver:BHex3.Out0
+HEX5[4] <= HexDriver:BHex3.Out0
+HEX5[5] <= HexDriver:BHex3.Out0
+HEX5[6] <= HexDriver:BHex3.Out0
 
 
 |adder2|control:run_once
@@ -222,7 +222,7 @@ Data_Out[15] <= Data_Out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Data_Out[16] <= Data_Out[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla
+|adder2|ripple_adder:adder
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -255,27 +255,27 @@ B[12] => B[12].IN1
 B[13] => B[13].IN1
 B[14] => B[14].IN1
 B[15] => B[15].IN1
-cin => cin.IN2
-S[0] <= fourbitCLAdder:CL0.S
-S[1] <= fourbitCLAdder:CL0.S
-S[2] <= fourbitCLAdder:CL0.S
-S[3] <= fourbitCLAdder:CL0.S
-S[4] <= fourbitCLAdder:CL1.S
-S[5] <= fourbitCLAdder:CL1.S
-S[6] <= fourbitCLAdder:CL1.S
-S[7] <= fourbitCLAdder:CL1.S
-S[8] <= fourbitCLAdder:CL2.S
-S[9] <= fourbitCLAdder:CL2.S
-S[10] <= fourbitCLAdder:CL2.S
-S[11] <= fourbitCLAdder:CL2.S
-S[12] <= fourbitCLAdder:CL3.S
-S[13] <= fourbitCLAdder:CL3.S
-S[14] <= fourbitCLAdder:CL3.S
-S[15] <= fourbitCLAdder:CL3.S
-cout <= lookahead:LA.cout
+cin => cin.IN1
+S[0] <= fourbitRippleAdder:RA0.S
+S[1] <= fourbitRippleAdder:RA0.S
+S[2] <= fourbitRippleAdder:RA0.S
+S[3] <= fourbitRippleAdder:RA0.S
+S[4] <= fourbitRippleAdder:RA1.S
+S[5] <= fourbitRippleAdder:RA1.S
+S[6] <= fourbitRippleAdder:RA1.S
+S[7] <= fourbitRippleAdder:RA1.S
+S[8] <= fourbitRippleAdder:RA2.S
+S[9] <= fourbitRippleAdder:RA2.S
+S[10] <= fourbitRippleAdder:RA2.S
+S[11] <= fourbitRippleAdder:RA2.S
+S[12] <= fourbitRippleAdder:RA3.S
+S[13] <= fourbitRippleAdder:RA3.S
+S[14] <= fourbitRippleAdder:RA3.S
+S[15] <= fourbitRippleAdder:RA3.S
+cout <= fourbitRippleAdder:RA3.cout
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL0
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA0
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -285,101 +285,70 @@ B[1] => B[1].IN1
 B[2] => B[2].IN1
 B[3] => B[3].IN1
 cin => cin.IN1
-S[0] <= full_adder_PG:FA0.s
-S[1] <= full_adder_PG:FA1.s
-S[2] <= full_adder_PG:FA2.s
-S[3] <= full_adder_PG:FA3.s
-PG <= lookahead:LA.PG
-GG <= lookahead:LA.GG
-cout <= lookahead:LA.cout
+S[0] <= full_adder:FA0.s
+S[1] <= full_adder:FA1.s
+S[2] <= full_adder:FA2.s
+S[3] <= full_adder:FA3.s
+cout <= full_adder:FA3.c
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|full_adder_PG:FA0
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA0|full_adder:FA0
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|full_adder_PG:FA1
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA0|full_adder:FA1
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|full_adder_PG:FA2
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA0|full_adder:FA2
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|full_adder_PG:FA3
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA0|full_adder:FA3
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|lookahead:LA
-cin => cout.IN0
-cin => C[0].DATAIN
-P[0] => cout.IN1
-P[0] => PG.IN0
-P[1] => cout.IN1
-P[1] => cout.IN0
-P[1] => GG.IN1
-P[1] => PG.IN1
-P[2] => cout.IN1
-P[2] => cout.IN1
-P[2] => cout.IN0
-P[2] => GG.IN1
-P[2] => GG.IN1
-P[2] => PG.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN0
-P[3] => GG.IN0
-P[3] => GG.IN0
-P[3] => PG.IN1
-G[0] => C.IN1
-G[0] => cout.IN1
-G[0] => GG.IN1
-G[1] => C.IN1
-G[1] => cout.IN1
-G[1] => GG.IN1
-G[2] => C.IN1
-G[2] => cout.IN1
-G[3] => cout.IN1
-G[3] => GG.IN1
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-C[0] <= cin.DB_MAX_OUTPUT_PORT_TYPE
-C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
-PG <= PG.DB_MAX_OUTPUT_PORT_TYPE
-GG <= GG.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL1
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA1
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -389,101 +358,70 @@ B[1] => B[1].IN1
 B[2] => B[2].IN1
 B[3] => B[3].IN1
 cin => cin.IN1
-S[0] <= full_adder_PG:FA0.s
-S[1] <= full_adder_PG:FA1.s
-S[2] <= full_adder_PG:FA2.s
-S[3] <= full_adder_PG:FA3.s
-PG <= lookahead:LA.PG
-GG <= lookahead:LA.GG
-cout <= lookahead:LA.cout
+S[0] <= full_adder:FA0.s
+S[1] <= full_adder:FA1.s
+S[2] <= full_adder:FA2.s
+S[3] <= full_adder:FA3.s
+cout <= full_adder:FA3.c
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|full_adder_PG:FA0
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA1|full_adder:FA0
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|full_adder_PG:FA1
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA1|full_adder:FA1
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|full_adder_PG:FA2
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA1|full_adder:FA2
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|full_adder_PG:FA3
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA1|full_adder:FA3
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|lookahead:LA
-cin => cout.IN0
-cin => C[0].DATAIN
-P[0] => cout.IN1
-P[0] => PG.IN0
-P[1] => cout.IN1
-P[1] => cout.IN0
-P[1] => GG.IN1
-P[1] => PG.IN1
-P[2] => cout.IN1
-P[2] => cout.IN1
-P[2] => cout.IN0
-P[2] => GG.IN1
-P[2] => GG.IN1
-P[2] => PG.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN0
-P[3] => GG.IN0
-P[3] => GG.IN0
-P[3] => PG.IN1
-G[0] => C.IN1
-G[0] => cout.IN1
-G[0] => GG.IN1
-G[1] => C.IN1
-G[1] => cout.IN1
-G[1] => GG.IN1
-G[2] => C.IN1
-G[2] => cout.IN1
-G[3] => cout.IN1
-G[3] => GG.IN1
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-C[0] <= cin.DB_MAX_OUTPUT_PORT_TYPE
-C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
-PG <= PG.DB_MAX_OUTPUT_PORT_TYPE
-GG <= GG.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL2
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA2
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -493,101 +431,70 @@ B[1] => B[1].IN1
 B[2] => B[2].IN1
 B[3] => B[3].IN1
 cin => cin.IN1
-S[0] <= full_adder_PG:FA0.s
-S[1] <= full_adder_PG:FA1.s
-S[2] <= full_adder_PG:FA2.s
-S[3] <= full_adder_PG:FA3.s
-PG <= lookahead:LA.PG
-GG <= lookahead:LA.GG
-cout <= lookahead:LA.cout
+S[0] <= full_adder:FA0.s
+S[1] <= full_adder:FA1.s
+S[2] <= full_adder:FA2.s
+S[3] <= full_adder:FA3.s
+cout <= full_adder:FA3.c
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|full_adder_PG:FA0
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA2|full_adder:FA0
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|full_adder_PG:FA1
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA2|full_adder:FA1
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|full_adder_PG:FA2
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA2|full_adder:FA2
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|full_adder_PG:FA3
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA2|full_adder:FA3
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|lookahead:LA
-cin => cout.IN0
-cin => C[0].DATAIN
-P[0] => cout.IN1
-P[0] => PG.IN0
-P[1] => cout.IN1
-P[1] => cout.IN0
-P[1] => GG.IN1
-P[1] => PG.IN1
-P[2] => cout.IN1
-P[2] => cout.IN1
-P[2] => cout.IN0
-P[2] => GG.IN1
-P[2] => GG.IN1
-P[2] => PG.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN0
-P[3] => GG.IN0
-P[3] => GG.IN0
-P[3] => PG.IN1
-G[0] => C.IN1
-G[0] => cout.IN1
-G[0] => GG.IN1
-G[1] => C.IN1
-G[1] => cout.IN1
-G[1] => GG.IN1
-G[2] => C.IN1
-G[2] => cout.IN1
-G[3] => cout.IN1
-G[3] => GG.IN1
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-C[0] <= cin.DB_MAX_OUTPUT_PORT_TYPE
-C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
-PG <= PG.DB_MAX_OUTPUT_PORT_TYPE
-GG <= GG.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL3
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA3
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -597,139 +504,67 @@ B[1] => B[1].IN1
 B[2] => B[2].IN1
 B[3] => B[3].IN1
 cin => cin.IN1
-S[0] <= full_adder_PG:FA0.s
-S[1] <= full_adder_PG:FA1.s
-S[2] <= full_adder_PG:FA2.s
-S[3] <= full_adder_PG:FA3.s
-PG <= lookahead:LA.PG
-GG <= lookahead:LA.GG
-cout <= lookahead:LA.cout
+S[0] <= full_adder:FA0.s
+S[1] <= full_adder:FA1.s
+S[2] <= full_adder:FA2.s
+S[3] <= full_adder:FA3.s
+cout <= full_adder:FA3.c
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL3|full_adder_PG:FA0
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA3|full_adder:FA0
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL3|full_adder_PG:FA1
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA3|full_adder:FA1
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL3|full_adder_PG:FA2
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA3|full_adder:FA2
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL3|full_adder_PG:FA3
+|adder2|ripple_adder:adder|fourbitRippleAdder:RA3|full_adder:FA3
 x => s.IN0
-x => G.IN0
+x => c.IN0
+x => c.IN0
 y => s.IN1
-y => G.IN1
+y => c.IN1
+y => c.IN0
 z => s.IN1
+z => c.IN1
+z => c.IN1
 s <= s.DB_MAX_OUTPUT_PORT_TYPE
-P <= s.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|adder2|lookahead_adder:adderla|fourbitCLAdder:CL3|lookahead:LA
-cin => cout.IN0
-cin => C[0].DATAIN
-P[0] => cout.IN1
-P[0] => PG.IN0
-P[1] => cout.IN1
-P[1] => cout.IN0
-P[1] => GG.IN1
-P[1] => PG.IN1
-P[2] => cout.IN1
-P[2] => cout.IN1
-P[2] => cout.IN0
-P[2] => GG.IN1
-P[2] => GG.IN1
-P[2] => PG.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN0
-P[3] => GG.IN0
-P[3] => GG.IN0
-P[3] => PG.IN1
-G[0] => C.IN1
-G[0] => cout.IN1
-G[0] => GG.IN1
-G[1] => C.IN1
-G[1] => cout.IN1
-G[1] => GG.IN1
-G[2] => C.IN1
-G[2] => cout.IN1
-G[3] => cout.IN1
-G[3] => GG.IN1
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-C[0] <= cin.DB_MAX_OUTPUT_PORT_TYPE
-C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
-PG <= PG.DB_MAX_OUTPUT_PORT_TYPE
-GG <= GG.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|adder2|lookahead_adder:adderla|lookahead:LA
-cin => cout.IN0
-cin => C[0].DATAIN
-P[0] => cout.IN1
-P[0] => PG.IN0
-P[1] => cout.IN1
-P[1] => cout.IN0
-P[1] => GG.IN1
-P[1] => PG.IN1
-P[2] => cout.IN1
-P[2] => cout.IN1
-P[2] => cout.IN0
-P[2] => GG.IN1
-P[2] => GG.IN1
-P[2] => PG.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN1
-P[3] => cout.IN0
-P[3] => GG.IN0
-P[3] => GG.IN0
-P[3] => PG.IN1
-G[0] => C.IN1
-G[0] => cout.IN1
-G[0] => GG.IN1
-G[1] => C.IN1
-G[1] => cout.IN1
-G[1] => GG.IN1
-G[2] => C.IN1
-G[2] => cout.IN1
-G[3] => cout.IN1
-G[3] => GG.IN1
-cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
-C[0] <= cin.DB_MAX_OUTPUT_PORT_TYPE
-C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
-C[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
-PG <= PG.DB_MAX_OUTPUT_PORT_TYPE
-GG <= GG.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |adder2|HexDriver:AHex0

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab3-ECE385
-Thu Feb 10 02:11:05 2022
+Thu Feb 10 22:48:59 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,17 +16,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. State Machine - |adder2|control:run_once|curr_state
   9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Port Connectivity Checks: "lookahead_adder:adderla|lookahead:LA"
- 12. Port Connectivity Checks: "lookahead_adder:adderla|fourbitCLAdder:CL3"
- 13. Port Connectivity Checks: "lookahead_adder:adderla|fourbitCLAdder:CL2"
- 14. Port Connectivity Checks: "lookahead_adder:adderla|fourbitCLAdder:CL1"
- 15. Port Connectivity Checks: "lookahead_adder:adderla|fourbitCLAdder:CL0"
- 16. Port Connectivity Checks: "lookahead_adder:adderla"
- 17. Port Connectivity Checks: "router:route"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
- 21. Analysis & Synthesis Suppressed Messages
+ 11. Port Connectivity Checks: "ripple_adder:adder"
+ 12. Port Connectivity Checks: "router:route"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -52,13 +47,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 10 02:11:05 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 10 22:48:59 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab3-ECE385                                 ;
 ; Top-level Entity Name              ; adder2                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 86                                          ;
-;     Total combinational functions  ; 86                                          ;
+; Total logic elements               ; 78                                          ;
+;     Total combinational functions  ; 78                                          ;
 ;     Dedicated logic registers      ; 20                                          ;
 ; Total registers                    ; 20                                          ;
 ; Total pins                         ; 65                                          ;
@@ -174,20 +169,19 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
-+--------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                 ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                  ; Library ;
-+--------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
-; 385_lab4_adders_provided_fa20/router.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/router.sv          ;         ;
-; 385_lab4_adders_provided_fa20/reg_17.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/reg_17.sv          ;         ;
-; 385_lab4_adders_provided_fa20/lookahead_adder.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/lookahead_adder.sv ;         ;
-; 385_lab4_adders_provided_fa20/HexDriver.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/HexDriver.sv       ;         ;
-; 385_lab4_adders_provided_fa20/control.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/control.sv         ;         ;
-; 385_lab4_adders_provided_fa20/adder2.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv          ;         ;
-; 4bitCLAdder.sv                                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/4bitCLAdder.sv                                   ;         ;
-; lookahead.sv                                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/lookahead.sv                                     ;         ;
-+--------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++-----------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path              ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
++-----------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; 385_lab4_adders_provided_fa20/router.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/router.sv       ;         ;
+; 385_lab4_adders_provided_fa20/ripple_adder.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv ;         ;
+; 385_lab4_adders_provided_fa20/reg_17.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/reg_17.sv       ;         ;
+; 385_lab4_adders_provided_fa20/HexDriver.sv    ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/HexDriver.sv    ;         ;
+; 385_lab4_adders_provided_fa20/control.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/control.sv      ;         ;
+; 385_lab4_adders_provided_fa20/adder2.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv       ;         ;
+; 4bitRippleAdder.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/alijh/Documents/ECE 385/lab3-ECE385/4bitRippleAdder.sv                            ;         ;
++-----------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -195,16 +189,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 86        ;
+; Estimated Total logic elements              ; 78        ;
 ;                                             ;           ;
-; Total combinational functions               ; 86        ;
+; Total combinational functions               ; 78        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 67        ;
-;     -- 3 input functions                    ; 9         ;
-;     -- <=2 input functions                  ; 10        ;
+;     -- 4 input functions                    ; 57        ;
+;     -- 3 input functions                    ; 12        ;
+;     -- <=2 input functions                  ; 9         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 86        ;
+;     -- normal mode                          ; 78        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 20        ;
@@ -217,51 +211,47 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 20        ;
-; Total fan-out                               ; 502       ;
-; Average fan-out                             ; 2.13      ;
+; Total fan-out                               ; 469       ;
+; Average fan-out                             ; 2.06      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                       ;
-+------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                  ; Entity Name     ; Library Name ;
-+------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+-----------------+--------------+
-; |adder2                      ; 86 (0)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 65   ; 0            ; 0          ; |adder2                                                              ; adder2          ; work         ;
-;    |HexDriver:AHex0|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:AHex0                                              ; HexDriver       ; work         ;
-;    |HexDriver:AHex1|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:AHex1                                              ; HexDriver       ; work         ;
-;    |HexDriver:BHex0|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:BHex0                                              ; HexDriver       ; work         ;
-;    |HexDriver:BHex1|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:BHex1                                              ; HexDriver       ; work         ;
-;    |HexDriver:BHex2|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:BHex2                                              ; HexDriver       ; work         ;
-;    |HexDriver:BHex3|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:BHex3                                              ; HexDriver       ; work         ;
-;    |control:run_once|        ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|control:run_once                                             ; control         ; work         ;
-;    |lookahead_adder:adderla| ; 41 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla                                      ; lookahead_adder ; work         ;
-;       |fourbitCLAdder:CL0|   ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL0                   ; fourbitCLAdder  ; work         ;
-;          |full_adder_PG:FA0| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|full_adder_PG:FA0 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|full_adder_PG:FA1 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|full_adder_PG:FA2 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA3| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|full_adder_PG:FA3 ; full_adder_PG   ; work         ;
-;          |lookahead:LA|      ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL0|lookahead:LA      ; lookahead       ; work         ;
-;       |fourbitCLAdder:CL1|   ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL1                   ; fourbitCLAdder  ; work         ;
-;          |full_adder_PG:FA0| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|full_adder_PG:FA0 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|full_adder_PG:FA1 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|full_adder_PG:FA2 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA3| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|full_adder_PG:FA3 ; full_adder_PG   ; work         ;
-;          |lookahead:LA|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL1|lookahead:LA      ; lookahead       ; work         ;
-;       |fourbitCLAdder:CL2|   ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL2                   ; fourbitCLAdder  ; work         ;
-;          |full_adder_PG:FA0| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|full_adder_PG:FA0 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|full_adder_PG:FA1 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|full_adder_PG:FA2 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA3| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|full_adder_PG:FA3 ; full_adder_PG   ; work         ;
-;          |lookahead:LA|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL2|lookahead:LA      ; lookahead       ; work         ;
-;       |fourbitCLAdder:CL3|   ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL3                   ; fourbitCLAdder  ; work         ;
-;          |full_adder_PG:FA0| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL3|full_adder_PG:FA0 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL3|full_adder_PG:FA1 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL3|full_adder_PG:FA2 ; full_adder_PG   ; work         ;
-;          |full_adder_PG:FA3| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|fourbitCLAdder:CL3|full_adder_PG:FA3 ; full_adder_PG   ; work         ;
-;       |lookahead:LA|         ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|lookahead_adder:adderla|lookahead:LA                         ; lookahead       ; work         ;
-;    |reg_17:reg_unit|         ; 0 (0)               ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|reg_17:reg_unit                                              ; reg_17          ; work         ;
-+------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+-----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                        ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                              ; Entity Name        ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+--------------------+--------------+
+; |adder2                        ; 78 (0)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 65   ; 0            ; 0          ; |adder2                                                          ; adder2             ; work         ;
+;    |HexDriver:AHex0|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:AHex0                                          ; HexDriver          ; work         ;
+;    |HexDriver:AHex1|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:AHex1                                          ; HexDriver          ; work         ;
+;    |HexDriver:BHex0|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:BHex0                                          ; HexDriver          ; work         ;
+;    |HexDriver:BHex1|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:BHex1                                          ; HexDriver          ; work         ;
+;    |HexDriver:BHex2|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:BHex2                                          ; HexDriver          ; work         ;
+;    |HexDriver:BHex3|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|HexDriver:BHex3                                          ; HexDriver          ; work         ;
+;    |control:run_once|          ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|control:run_once                                         ; control            ; work         ;
+;    |reg_17:reg_unit|           ; 0 (0)               ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|reg_17:reg_unit                                          ; reg_17             ; work         ;
+;    |ripple_adder:adder|        ; 33 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder                                       ; ripple_adder       ; work         ;
+;       |fourbitRippleAdder:RA0| ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA0                ; fourbitRippleAdder ; work         ;
+;          |full_adder:FA0|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA0|full_adder:FA0 ; full_adder         ; work         ;
+;          |full_adder:FA1|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA0|full_adder:FA1 ; full_adder         ; work         ;
+;          |full_adder:FA2|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA0|full_adder:FA2 ; full_adder         ; work         ;
+;          |full_adder:FA3|      ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA0|full_adder:FA3 ; full_adder         ; work         ;
+;       |fourbitRippleAdder:RA1| ; 10 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA1                ; fourbitRippleAdder ; work         ;
+;          |full_adder:FA0|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA1|full_adder:FA0 ; full_adder         ; work         ;
+;          |full_adder:FA1|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA1|full_adder:FA1 ; full_adder         ; work         ;
+;          |full_adder:FA2|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA1|full_adder:FA2 ; full_adder         ; work         ;
+;          |full_adder:FA3|      ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA1|full_adder:FA3 ; full_adder         ; work         ;
+;       |fourbitRippleAdder:RA2| ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA2                ; fourbitRippleAdder ; work         ;
+;          |full_adder:FA0|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA2|full_adder:FA0 ; full_adder         ; work         ;
+;          |full_adder:FA1|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA2|full_adder:FA1 ; full_adder         ; work         ;
+;          |full_adder:FA2|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA2|full_adder:FA2 ; full_adder         ; work         ;
+;          |full_adder:FA3|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA2|full_adder:FA3 ; full_adder         ; work         ;
+;       |fourbitRippleAdder:RA3| ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA3                ; fourbitRippleAdder ; work         ;
+;          |full_adder:FA0|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA3|full_adder:FA0 ; full_adder         ; work         ;
+;          |full_adder:FA1|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA3|full_adder:FA1 ; full_adder         ; work         ;
+;          |full_adder:FA2|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA3|full_adder:FA2 ; full_adder         ; work         ;
+;          |full_adder:FA3|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder2|ripple_adder:adder|fourbitRippleAdder:RA3|full_adder:FA3 ; full_adder         ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -302,60 +292,13 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "lookahead_adder:adderla|lookahead:LA"                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; C[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; PG   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; GG   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "lookahead_adder:adderla|fourbitCLAdder:CL3" ;
-+------+--------+----------+---------------------------------------------+
-; Port ; Type   ; Severity ; Details                                     ;
-+------+--------+----------+---------------------------------------------+
-; cout ; Output ; Info     ; Explicitly unconnected                      ;
-+------+--------+----------+---------------------------------------------+
-
-
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "lookahead_adder:adderla|fourbitCLAdder:CL2" ;
-+------+--------+----------+---------------------------------------------+
-; Port ; Type   ; Severity ; Details                                     ;
-+------+--------+----------+---------------------------------------------+
-; cout ; Output ; Info     ; Explicitly unconnected                      ;
-+------+--------+----------+---------------------------------------------+
-
-
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "lookahead_adder:adderla|fourbitCLAdder:CL1" ;
-+------+--------+----------+---------------------------------------------+
-; Port ; Type   ; Severity ; Details                                     ;
-+------+--------+----------+---------------------------------------------+
-; cout ; Output ; Info     ; Explicitly unconnected                      ;
-+------+--------+----------+---------------------------------------------+
-
-
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "lookahead_adder:adderla|fourbitCLAdder:CL0" ;
-+------+--------+----------+---------------------------------------------+
-; Port ; Type   ; Severity ; Details                                     ;
-+------+--------+----------+---------------------------------------------+
-; cout ; Output ; Info     ; Explicitly unconnected                      ;
-+------+--------+----------+---------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Port Connectivity Checks: "lookahead_adder:adderla" ;
-+------+-------+----------+---------------------------+
-; Port ; Type  ; Severity ; Details                   ;
-+------+-------+----------+---------------------------+
-; cin  ; Input ; Info     ; Stuck at GND              ;
-+------+-------+----------+---------------------------+
++------------------------------------------------+
+; Port Connectivity Checks: "ripple_adder:adder" ;
++------+-------+----------+----------------------+
+; Port ; Type  ; Severity ; Details              ;
++------+-------+----------+----------------------+
+; cin  ; Input ; Info     ; Stuck at GND         ;
++------+-------+----------+----------------------+
 
 
 +------------------------------------------------+
@@ -376,16 +319,16 @@ Encoding Type:  One-Hot
 ; cycloneiii_ff         ; 20                          ;
 ;     CLR               ; 3                           ;
 ;     ENA CLR           ; 17                          ;
-; cycloneiii_lcell_comb ; 93                          ;
-;     normal            ; 93                          ;
+; cycloneiii_lcell_comb ; 85                          ;
+;     normal            ; 85                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 67                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 57                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.29                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 3.51                        ;
 +-----------------------+-----------------------------+
 
 
@@ -404,7 +347,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Feb 10 02:10:54 2022
+    Info: Processing started: Thu Feb 10 22:48:47 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3-ECE385 -c lab3-ECE385
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -436,14 +379,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file lookahe
     Info (12023): Found entity 1: lookahead File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/lookahead.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench_cla.sv
     Info (12023): Found entity 1: testbench_CLA File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/testbench_CLA.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file multiplexer.sv
+    Info (12023): Found entity 1: multiplexer File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/multiplexer.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fourbitcsa.sv
+    Info (12023): Found entity 1: fourbitCSA File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/fourbitCSA.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench_csa.sv
+    Info (12023): Found entity 1: testbench_CSA File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/testbench_CSA.sv Line: 1
 Info (12127): Elaborating entity "adder2" for the top level hierarchy
 Info (12128): Elaborating entity "control" for hierarchy "control:run_once" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 30
 Info (12128): Elaborating entity "router" for hierarchy "router:route" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 33
 Info (12128): Elaborating entity "reg_17" for hierarchy "reg_17:reg_unit" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 36
-Info (12128): Elaborating entity "lookahead_adder" for hierarchy "lookahead_adder:adderla" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 42
-Info (12128): Elaborating entity "fourbitCLAdder" for hierarchy "lookahead_adder:adderla|fourbitCLAdder:CL0" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 17
-Info (12128): Elaborating entity "full_adder_PG" for hierarchy "lookahead_adder:adderla|fourbitCLAdder:CL0|full_adder_PG:FA0" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/4bitCLAdder.sv Line: 20
-Info (12128): Elaborating entity "lookahead" for hierarchy "lookahead_adder:adderla|fourbitCLAdder:CL0|lookahead:LA" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/4bitCLAdder.sv Line: 25
+Info (12128): Elaborating entity "ripple_adder" for hierarchy "ripple_adder:adder" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 40
+Info (12128): Elaborating entity "fourbitRippleAdder" for hierarchy "ripple_adder:adder|fourbitRippleAdder:RA0" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 21
+Info (12128): Elaborating entity "full_adder" for hierarchy "ripple_adder:adder|fourbitRippleAdder:RA0|full_adder:FA0" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/4bitRippleAdder.sv Line: 16
 Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:AHex0" File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 50
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[2]" is stuck at GND File: C:/Users/alijh/Documents/ECE 385/lab3-ECE385/385_lab4_adders_provided_fa20/adder2.sv Line: 3
@@ -458,15 +406,15 @@ Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/alijh/Documents/ECE 385/lab3-ECE385/output_files/lab3-ECE385.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 151 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 143 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 86 logic cells
+    Info (21061): Implemented 78 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4765 megabytes
-    Info: Processing ended: Thu Feb 10 02:11:05 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Thu Feb 10 22:48:59 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+

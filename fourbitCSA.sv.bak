@@ -1,0 +1,9 @@
+module fourbitCSA(input logic cin,
+						input logic [3:0] A, B,
+						output logic cout)						
+begin
+
+fourbitRippleAdder RA1(.A(A[3:0]), .B(B[3:0]), .cin(cin), .S(S[3:0]), .cout(c1));
+
+
+end

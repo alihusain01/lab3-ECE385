@@ -127,7 +127,7 @@ set_location_assignment PIN_A7 -to Run_Accumulate
 set_global_assignment -name SYSTEMVERILOG_FILE 4bitRippleAdder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE "testbench-RA.sv"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench_CLA -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench_CSA -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME "testbench-RA" -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id "testbench-RA"
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "200 ns" -section_id "testbench-RA"
@@ -135,12 +135,20 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_RA -section_id 
 set_global_assignment -name SYSTEMVERILOG_FILE 4bitCLAdder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE lookahead.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbench_CLA.sv
-set_global_assignment -name EDA_TEST_BENCH_FILE "testbench-RA.sv" -section_id "testbench-RA"
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench_CLA -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_CLA
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "200 ns" -section_id testbench_CLA
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_CLA -section_id testbench_CLA
+set_global_assignment -name SYSTEMVERILOG_FILE multiplexer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE fourbitCSA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbench_CSA.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE "testbench-RA.sv" -section_id "testbench-RA"
 set_global_assignment -name EDA_TEST_BENCH_FILE testbench_CLA.sv -section_id testbench_CLA
+set_global_assignment -name EDA_TEST_BENCH_NAME testbench_CSA -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_CSA
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "200 ns" -section_id testbench_CSA
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_CSA -section_id testbench_CSA
+set_global_assignment -name EDA_TEST_BENCH_FILE testbench_CSA.sv -section_id testbench_CSA
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "02/10/2022 00:11:19"
+// DATE "02/10/2022 22:49:21"
 
 // 
 // Device: Altera 10M50DAF484C7G Package FBGA484
@@ -40,17 +40,17 @@ module adder2 (
 	HEX3,
 	HEX4,
 	HEX5);
-input 	Clk;
-input 	Reset_Clear;
-input 	Run_Accumulate;
-input 	[9:0] SW;
-output 	[9:0] LED;
-output 	[6:0] HEX0;
-output 	[6:0] HEX1;
-output 	[6:0] HEX2;
-output 	[6:0] HEX3;
-output 	[6:0] HEX4;
-output 	[6:0] HEX5;
+input 	reg Clk ;
+input 	reg Reset_Clear ;
+input 	reg Run_Accumulate ;
+input 	logic [9:0] SW ;
+output 	logic [9:0] LED ;
+output 	logic [6:0] HEX0 ;
+output 	logic [6:0] HEX1 ;
+output 	logic [6:0] HEX2 ;
+output 	logic [6:0] HEX3 ;
+output 	logic [6:0] HEX4 ;
+output 	logic [6:0] HEX5 ;
 
 // Design Ports Information
 // LED[0]	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
